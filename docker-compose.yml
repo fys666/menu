@@ -1,0 +1,23 @@
+# 家庭菜单小程序 - Docker Compose 配置
+# 服务: MongoDB 数据库
+
+services:
+  # MongoDB 数据库服务
+  mongo:
+    image: mongo:latest
+    container_name: family-menu-mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    environment:
+      # MongoDB 初始化管理员账号密码
+      MONGO_INITDB_ROOT_USERNAME: fufu
+      MONGO_INITDB_ROOT_PASSWORD: fufufamily
+    volumes:
+      # 数据持久化存储
+      - mongo-data:/data/db
+
+# 数据卷配置
+volumes:
+  mongo-data:
+    driver: local

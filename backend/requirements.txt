@@ -1,0 +1,19 @@
+# 家庭菜单小程序 - 后端依赖
+
+# Web 框架
+fastapi>=0.100.0
+uvicorn>=0.23.0
+
+# 数据库
+motor>=3.3.0
+pymongo>=4.6.0
+
+# 数据验证
+pydantic>=2.5.0
+
+# 文件处理
+python-multipart>=0.0.6
+aiofiles>=23.2.0
+
+# HTTP 客户端
+httpx>=0.25.0
